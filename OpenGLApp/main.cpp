@@ -252,7 +252,7 @@ int main() {
 		// INTERACTING WITH THE TRIANGLE
 		glm::mat4 model(1.0f);
 		// Translate in de X axis the triangle		
-		model = glm::translate(model, glm::vec3(0.0f, triOffset, -2.5f)); // putting triOffset in 'y' its gonna be diagonal
+		model = glm::translate(model, glm::vec3(triOffset, 0.0f, -2.5f)); // putting triOffset in 'y' its gonna be diagonal
 		// Rotating the triangle 
 		model = glm::rotate(model, currentAngle, glm::vec3(0.0f, 1.0f, 0.0f));  
 		// Scaling the triangle 
