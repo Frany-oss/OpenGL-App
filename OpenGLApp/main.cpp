@@ -26,8 +26,7 @@ static const char* vShader = "Shaders/shader.vert";
 // Fragment Shader
 static const char* fShader = "Shaders/shader.frag";
 
-void CreateObjects() 
-{
+void CreateObjects()  {
 	unsigned int indices[] = {
 		0, 3, 1,
 		1, 3, 2,
@@ -51,15 +50,13 @@ void CreateObjects()
 	meshList.push_back(obj2);
 }
 
-void CreateShaders()
-{
+void CreateShaders() {
 	Shader *shader1 = new Shader();
 	shader1->CreateFromFiles(vShader, fShader);
 	shaderList.push_back(*shader1);
 }
 
-int main() 
-{
+int main() {
 
 	mainWindow = Window(800, 600);
 	mainWindow.Initialise();
@@ -68,11 +65,10 @@ int main()
 	CreateShaders();
 
 	GLuint uniformProjection = 0, uniformModel = 0;
-	glm::mat4 projection = glm::perspective(glm::radians(45.0f), (GLfloat)mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.0f);
+	glm::mat4 projection = glm::perspective(glm::radians(45.0f), (GLfloat)mainWindow.GetBufferWidth() / mainWindow.GetBufferHeight(), 0.1f, 100.0f);
 
 	// Loop until window closed
-	while (!mainWindow.getShouldClose())
-	{
+	while (!mainWindow.getShouldClose()) {
 		// Get + Handle User Input
 		glfwPollEvents();
 
